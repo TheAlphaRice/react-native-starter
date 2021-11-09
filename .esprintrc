@@ -1,0 +1,17 @@
+{
+  "paths": [
+    "src/*.js",
+    "src/*.ts",
+    "src/*.tsx",
+    "src/**/*.js",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "e2e/**/*.js",
+    "e2e/**/*.ts",
+    "e2e/**/*.tsx"
+  ],
+  "ignored": [
+    "**/node_modules/**/*"
+  ],
+  "port": 5004
+}

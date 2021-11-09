@@ -334,7 +334,7 @@ export default function ComponentsScreen(props) {
         />
       </View>
 
-      <View style={styles.componentsSection}>
+      {/* <View style={styles.componentsSection}>
         <Text style={styles.componentSectionHeader}>Dropdown</Text>
 
         <Dropdown
@@ -342,7 +342,7 @@ export default function ComponentsScreen(props) {
           onSelect={() => {}}
           items={['option 1', 'option 2']}
         />
-      </View>
+      </View> */}
     </ScrollView>
   );
 }
