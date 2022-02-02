@@ -13,90 +13,91 @@ const blogIcon = require('../../../assets/images/pages/blog.png');
 
 export default function PagesScreen(props) {
   return (
-    <View style={styles.container}>
-      <View style={styles.row}>
+    <View style={ styles.container }>
+      <View style={ styles.row }>
         <TouchableOpacity
-          onPress={() => props.navigation.navigate('Charts')}
-          style={styles.item}
+
+          onPress={ () => props.navigation.navigate('Charts') }
+          style={ styles.item }
         >
           <Image
-            resizeMode="contain"
-            source={chartIcon}
-            style={styles.itemImage}
+            resizeMode='contain'
+            source={ chartIcon }
+            style={ styles.itemImage }
           />
-          <Text style={styles.itemText}>Charts</Text>
+          <Text style={ styles.itemText }>Charts</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => props.navigation.navigate('Gallery')}
-          style={styles.item}
+          onPress={ () => props.navigation.navigate('Gallery') }
+          style={ styles.item }
         >
           <Image
-            resizeMode="contain"
-            source={galleryIcon}
-            style={styles.itemImage}
+            resizeMode='contain'
+            source={ galleryIcon }
+            style={ styles.itemImage }
           />
-          <Text style={styles.itemText}>Gallery</Text>
+          <Text style={ styles.itemText }>Gallery</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => props.navigation.navigate('Profile')}
-          style={styles.item}
+          onPress={ () => props.navigation.navigate('Profile') }
+          style={ styles.item }
         >
           <Image
-            resizeMode="contain"
-            source={profileIcon}
-            style={styles.itemImage}
+            resizeMode='contain'
+            source={ profileIcon }
+            style={ styles.itemImage }
           />
-          <Text style={styles.itemText}>Profile</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.row}>
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate('Chat')}
-          style={styles.item}
-        >
-          <Image
-            resizeMode="contain"
-            source={chatIcon}
-            style={styles.itemImage}
-          />
-          <Text style={styles.itemText}>Chats</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate('Calendar')}
-          style={styles.item}
-        >
-          <Image
-            resizeMode="contain"
-            source={calendarIcon}
-            style={styles.itemImage}
-          />
-          <Text style={styles.itemText}>Calendar</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate('Auth')}
-          style={styles.item}
-        >
-          <Image
-            resizeMode="contain"
-            source={loginIcon}
-            tintColor={colors.primary}
-            style={styles.itemImage}
-          />
-          <Text style={styles.itemText}>Login</Text>
+          <Text style={ styles.itemText }>Profile</Text>
         </TouchableOpacity>
       </View>
-      <View style={styles.row}>
+      <View style={ styles.row }>
         <TouchableOpacity
-          onPress={() => props.navigation.navigate('Blog')}
-          style={styles.blogItem}
+          onPress={ () => props.navigation.navigate('Chat') }
+          style={ styles.item }
         >
           <Image
-            resizeMode="contain"
-            source={blogIcon}
-            tintColor={colors.primary}
-            style={styles.itemImage}
+            resizeMode='contain'
+            source={ chatIcon }
+            style={ styles.itemImage }
           />
-          <Text style={styles.itemText}>Blog</Text>
+          <Text style={ styles.itemText }>Chats</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={ () => props.navigation.navigate('Calendar') }
+          style={ styles.item }
+        >
+          <Image
+            resizeMode='contain'
+            source={ calendarIcon }
+            style={ styles.itemImage }
+          />
+          <Text style={ styles.itemText }>Calendar</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={ () => props.navigation.navigate('Auth') }
+          style={ styles.item }
+        >
+          <Image
+            resizeMode='contain'
+            source={ loginIcon }
+            tintColor={ colors.primary }
+            style={ styles.itemImage }
+          />
+          <Text style={ styles.itemText }>Login</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={ styles.row }>
+        <TouchableOpacity
+          onPress={ () => props.navigation.navigate('Blog') }
+          style={ styles.blogItem }
+        >
+          <Image
+            resizeMode='contain'
+            source={ blogIcon }
+            tintColor={ colors.primary }
+            style={ styles.itemImage }
+          />
+          <Text style={ styles.itemText }>Blog</Text>
         </TouchableOpacity>
       </View>
     </View>

@@ -7,26 +7,26 @@ import { GridRow } from '../../components';
 
 export default function GalleryScreen(props) {
   const _keyExtractor = item =>
-    item.id ? `${item.id}` : `${item[0] && item[0].id}`;
+    (item.id ? `${item.id}` : `${item[0] && item[0].id}`);
 
   const _renderItem = ({ item, index }) => {
     if (index === 0) {
       return (
-        <Lightbox key={item[0].id}>
-          <Image style={styles.topImage} source={{ uri: item[0].link }} />
+        <Lightbox key={ item[0].id }>
+          <Image style={ styles.topImage } source={ { uri: item[0].link } } />
         </Lightbox>
       );
     }
 
     return (
-      <View key={item[0].id} style={styles.imagesRow}>
-        {item.map(singleItem => (
-          <View key={singleItem.id} style={styles.imageContainer}>
+      <View key={ item[0].id } style={ styles.imagesRow }>
+        { item.map(singleItem => (
+          <View key={ singleItem.id } style={ styles.imageContainer }>
             <Lightbox>
-              <Image style={styles.image} source={{ uri: singleItem.link }} />
+              <Image style={ styles.image } source={ { uri: singleItem.link } } />
             </Lightbox>
           </View>
-        ))}
+        )) }
       </View>
     );
   };
@@ -43,12 +43,12 @@ export default function GalleryScreen(props) {
 
   return (
     <FlatList
-      style={styles.container}
-      onRefresh={props.refreshImages}
-      refreshing={props.images.length === 0 && props.isLoading}
-      data={groupedData}
-      keyExtractor={_keyExtractor}
-      renderItem={_renderItem}
+      style={ styles.container }
+      onRefresh={ props.refreshImages }
+      refreshing={ props.images.length === 0 && props.isLoading }
+      data={ groupedData }
+      keyExtractor={ _keyExtractor }
+      renderItem={ _renderItem }
     />
   );
 }

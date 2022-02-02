@@ -3,7 +3,7 @@ import { TouchableOpacity, Image } from 'react-native';
 
 import TabNavigator from './MainTabNavigator';
 import GalleryScreen from '../gallery/GalleryViewContainer';
-import AvailableInFullVersion from '../../modules/availableInFullVersion/AvailableInFullVersionViewContainer';
+import AvailableInFullVersion from '../availableInFullVersion/AvailableInFullVersionViewContainer';
 
 // import ProfileScreen from '../profile/ProfileViewContainer';
 // import ArticleScreen from '../article/ArticleViewContainer';
@@ -14,25 +14,23 @@ import AvailableInFullVersion from '../../modules/availableInFullVersion/Availab
 
 import { colors, fonts } from '../../styles';
 
-const headerLeftComponent = (props) => {
-  return (
-    <TouchableOpacity
-      onPress={props.onPress}
-      style={{
-        paddingHorizontal: 16,
-        paddingVertical: 12,
-      }}
-    >
-      <Image
-        source={require('../../../assets/images/icons/arrow-back.png')}
-        resizeMode="contain"
-        style={{
-          height: 20,
-        }}
-      />
-    </TouchableOpacity>    
-  )
-}
+const headerLeftComponent = props => (
+  <TouchableOpacity
+    onPress={ props.onPress }
+    style={ {
+      paddingHorizontal: 16,
+      paddingVertical: 12,
+    } }
+  >
+    <Image
+      source={ require('../../../assets/images/icons/arrow-back.png') }
+      resizeMode='contain'
+      style={ {
+        height: 20,
+      } }
+    />
+  </TouchableOpacity>
+);
 
 const headerBackground = require('../../../assets/images/topBarBg.png');
 
@@ -136,6 +134,6 @@ const StackNavigationData = [
       fontSize: 18,
     },
   },
-]
+];
 
 export default StackNavigationData;

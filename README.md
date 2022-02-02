@@ -38,14 +38,16 @@ cd ios && pod install
 
 #### 2. Open RNS in your iOS simulator
 
-Run this command to start the development server and to start your app on iOS simulator:
+Run start scrip first, then run either ios or android.
 ```
-yarn run:ios
+npm run start
+
+npm run:ios
 ```
 
 Or, if you prefer Android:
 ```
-yarn run:android
+npm run:android
 ```
 
 That's it! Cool, right?

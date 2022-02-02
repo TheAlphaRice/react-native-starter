@@ -6,7 +6,7 @@ const baseConfig = {
   root: true,
   extends: ['airbnb'],
   parser: '@babel/eslint-parser',
-  plugins: ['jest', 'babel', 'jsx-max-len', 'unicorn', 'lodash', 'react-native'],
+  plugins: ['jest', 'babel', 'jsx-max-len', 'lodash', 'react-native'],
   env: {
     'jest/globals': true,
   },
@@ -141,8 +141,6 @@ const baseConfig = {
       },
     ],
     'import/prefer-default-export': 'off',
-    'unicorn/no-abusive-eslint-disable': 'error',
-    'unicorn/import-index': 'error',
     'lodash/import-scope': ['error', 'full'],
     'no-param-reassign': [
       'error',
@@ -203,7 +201,6 @@ const baseConfig = {
  */
 const typescriptOverrides = {
   files: ['**/*.{ts,tsx}'],
-  extends: ['airbnb-typescript'],
   plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   parserOptions: {

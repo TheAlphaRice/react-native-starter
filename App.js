@@ -4,6 +4,8 @@ import { View, ActivityIndicator, StyleSheet } from 'react-native';
 import { PersistGate } from 'redux-persist/integration/react';
 import { NavigationContainer } from '@react-navigation/native';
 import { colors } from './src/styles';
+// Must be imported above App and bugsnag services to work
+import './ReactotronConfig';
 
 import { store, persistor } from './src/redux/store';
 

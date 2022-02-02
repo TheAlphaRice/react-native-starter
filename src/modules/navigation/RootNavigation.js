@@ -13,42 +13,40 @@ export default function NavigatorView(props) {
   // }
   // return <AuthScreen />;
 
-  const headerLeftComponentMenu = () => {
-    return (
-      <TouchableOpacity
-        onPress={() => props.navigation.toggleDrawer()}
-        style={{
-          paddingHorizontal: 16,
-          paddingVertical: 12,
-        }}
-      >
-        <Image
-          source={require('../../../assets/images/drawer/menu.png')}
-          resizeMode="contain"
-          style={{
-            height: 20,
-          }}
-        />
-      </TouchableOpacity>    
-    )
-  }
+  const headerLeftComponentMenu = () => (
+    <TouchableOpacity
+      onPress={ () => props.navigation.toggleDrawer() }
+      style={ {
+        paddingHorizontal: 16,
+        paddingVertical: 12,
+      } }
+    >
+      <Image
+        source={ require('../../../assets/images/drawer/menu.png') }
+        resizeMode='contain'
+        style={ {
+          height: 20,
+        } }
+      />
+    </TouchableOpacity>
+  );
 
   return (
     <Stack.Navigator>
-      {StackNavigationData.map((item, idx) => (
+      { StackNavigationData.map((item, idx) => (
         <Stack.Screen
-          key={`stack_item-${idx+1}`}
-          name={item.name} 
-          component={item.component} 
-          options={{
+          key={ `stack_item-${idx + 1}` }
+          name={ item.name }
+          component={ item.component }
+          options={ {
             headerLeft: item.headerLeft || headerLeftComponentMenu,
             headerBackground: () => (
-              <Image style={styles.headerImage} source={item.headerBackground.source} />
+              <Image style={ styles.headerImage } source={ item.headerBackground.source } />
             ),
             headerTitleStyle: item.headerTitleStyle,
-          }} 
+          } }
         />
-      ))}
+      )) }
     </Stack.Navigator>
   );
 }
@@ -60,7 +58,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    width: 100 + '%',
+    width: `${100}%`,
     height: Header.height,
   },
 });
