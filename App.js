@@ -11,16 +11,16 @@ import AppView from './src/modules/AppViewContainer';
 
 export default function App() {
   return (
-    <Provider store={store}>
+    <Provider store={ store }>
       <NavigationContainer>
         <PersistGate
           loading={
             // eslint-disable-next-line react/jsx-wrap-multilines
-            <View style={styles.container}>
-              <ActivityIndicator color={colors.red} />
+            <View style={ styles.container }>
+              <ActivityIndicator color={ colors.red } />
             </View>
           }
-          persistor={persistor}
+          persistor={ persistor }
         >
           <AppView />
         </PersistGate>
