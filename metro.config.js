@@ -1,7 +1,13 @@
-const blacklist = require('metro-config/src/defaults/blacklist');
-
 module.exports = {
+  transformer: {
+    getTransformOptions: async () => ({
+      transform: {
+        experimentalImportSupport: false,
+        inlineRequires: false,
+      },
+    }),
+  },
   resolver: {
-    blacklistRE: blacklist(['<rootDir>/ios/Pods/']),
+    sourceExts: ['jsx', 'js', 'ts', 'tsx'], //add here
   },
 };
